@@ -4,7 +4,7 @@
   hosts: all
   tasks:
     - name: Save the result of 'whoami' in 'whoami_out'
-      win_command: 'C:\Program Files\osquery\osqueryi.exe --json "SELECT lp.address, lp.pid, lp.port, lp.protocol, p.name, p.path, p.cmdline FROM listening_ports lp JOIN processes p ON lp.pid = p.pid;"''
+      win_command: 'C:\Program Files\osquery\osqueryi.exe --json "SELECT lp.address, lp.pid, lp.port, lp.protocol, p.name, p.path, p.cmdline FROM listening_ports lp JOIN processes p ON lp.pid = p.pid;"'
       register: whoami_out
    
    
