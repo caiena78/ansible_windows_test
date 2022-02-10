@@ -9,6 +9,6 @@
    
     - name: debug
       debug:
-        msg: '{{item}}'
+        msg: '{{item.name -- item.port}}'
       loop: '{{response.stdout}}'
  
