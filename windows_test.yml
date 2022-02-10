@@ -4,7 +4,7 @@
   hosts: all
   tasks:
     - name: Save the result of 'whoami' in 'whoami_out'
-      win_command: 'osqueryi.exe --json "SELECT lp.port, p.name, p.path, p.cmdline FROM listening_ports lp JOIN processes p ON lp.pid = p.pid where lp.port==445;"'
+      win_command: 'osqueryi.exe --json "{{select}}"'
       register: response   
    
     - name: debug
